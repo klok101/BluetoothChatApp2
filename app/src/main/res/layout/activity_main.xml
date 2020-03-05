@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/listen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Listen"
+        app:layout_constraintEnd_toStartOf="@+id/listDevices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Status"
+        app:layout_constraintBottom_toBottomOf="@+id/listDevices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/listDevices"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="#40006796"
+        app:layout_constraintBottom_toTopOf="@+id/msg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listDevices"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/listDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="List Devices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:height="100dp"
+        android:background="#40FF0000"
+        android:gravity="center"
+        android:text="Message"
+        android:textColor="#9E0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/writemsg"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="#40000000"
+        android:backgroundTint="#000000"
+        android:hint="Message"
+        app:layout_constraintEnd_toStartOf="@+id/send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/msg" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:text="Send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/msg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
